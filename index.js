@@ -18,11 +18,7 @@ const server = Hapi.server({
 server.route({
   method: "POST",
   path: "/post",
-  // options: {
-  //   validate: {
-  //     payload: schema,
-  //   },
-  // },
+
   handler: async (request, h) => {
     const schema = Joi.object({
       firstname: Joi.string().min(5).max(10).required(),
